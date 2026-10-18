@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Sin Código: Multiplica tu Productividad en 7 Días </title>
+  <meta name="description" content="Aprende a usar ChatGPT, Gemini y Claude sin programar. 5 módulos en video + biblioteca de 100 prompts profesionales. Garantía de 7 días.">
+  <link rel="canonical" href="https://juandafluya.github.io/ia-sin-codigo/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fluya Academy">
+  <meta property="og:title" content="IA Sin Código — Multiplica tu productividad en 7 días">
+  <meta property="og:description" content="Aprende a usar ChatGPT, Gemini y Claude sin programar. 5 módulos en video + biblioteca de 100 prompts profesionales. Garantía de 7 días.">
+  <meta property="og:image" content="https://juandafluya.github.io/assets/img/og_ia.jpg">
+  <meta property="og:url" content="https://juandafluya.github.io/ia-sin-codigo/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0A0A0F">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-color: #0A0A0F;
+            --accent-primary: #FF6B35;
+            --accent-primary-hover: #ff8555;
+            --accent-secondary: #00D4FF;
+            --accent-green: #00FF88;
+            --text-color: #EEEEF0;
+            --card-bg: rgba(20, 20, 30, 0.85);
+            --font-headings: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --gradient-orange: linear-gradient(135deg, #FF6B35, #FF8C42);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: var(--font-headings);
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .neon-text-orange {
+            color: var(--accent-primary);
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.5), 0 0 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .neon-text-cyan {
+            color: var(--accent-secondary);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        
+        .glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-family: var(--font-headings);
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-orange);
+            color: #fff;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
+            background: linear-gradient(135deg, #ff7a4a, #ff9b57);
+        }
+
+        .btn-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 107, 53, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+        }
+
+        /* Cards */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-image: linear-gradient(to bottom, rgba(10, 10, 15, 0.8), rgba(10, 10, 15, 1)), url('../assets/img/cinematic_01.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .pre-header {
+            color: var(--accent-secondary);
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent-primary);
+            text-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #b0b0b8;
+            margin-bottom: 40px;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .badge i {
+            color: var(--accent-green);
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(0,212,255,0.2) 0%, rgba(10,10,15,0) 100%);
+            pointer-events: none;
+        }
+
+        /* PAIN SECTION */
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .pain-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .pain-icon {
+            color: var(--accent-primary);
+            flex-shrink: 0;
+        }
+
+        /* SOLUTION SECTION */
+        .solution-section {
+            background: linear-gradient(180deg, var(--bg-color) 0%, #12121c 50%, var(--bg-color) 100%);
+        }
+
+        .solution-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .solution-list {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .solution-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-secondary);
+        }
+
+        /* MODULES SECTION */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 60px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .module-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .module-icon-wrap {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(0, 212, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-secondary);
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .module-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        /* BONUSES SECTION */
+        .bonuses-section {
+            background-image: linear-gradient(to bottom, rgba(10, 10, 15, 0.95), rgba(10, 10, 15, 0.95)), url('../assets/img/cinematic_05.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .bonus-card {
+            border-color: rgba(255, 107, 53, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonus-card::before {
+            content: 'GRATIS';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--accent-primary);
+            color: #fff;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            font-family: var(--font-headings);
+            font-size: 0.9rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .bonus-value {
+            color: var(--accent-primary);
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+
+        /* VALUE STACK */
+        .value-stack {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .stack-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .stack-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stack-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .stack-table td {
+            padding: 20px;
+            font-size: 1.1rem;
+        }
+
+        .stack-table td:last-child {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .stack-total {
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .price-strike {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .price-final {
+            font-size: 3rem;
+            color: var(--accent-primary);
+            font-weight: 700;
+            font-family: var(--font-headings);
+            text-shadow: 0 0 15px rgba(255, 107, 53, 0.4);
+        }
+
+        /* GUARANTEE */
+        .guarantee {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+        
+        .guarantee-icon {
+            color: var(--accent-green);
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background: rgba(20, 20, 30, 0.5);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: var(--font-headings);
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #b0b0b8;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 200px; /* arbitrary max-height for animation */
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+            color: var(--accent-secondary);
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background-image: linear-gradient(to top, rgba(10, 10, 15, 1), rgba(10, 10, 15, 0.8)), url('../assets/img/cinematic_05.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .secure-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .secure-badges span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #050508;
+            padding: 40px 0;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.8rem; }
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-badges { align-items: center; }
+            .hero-image { max-width: 600px; margin: 0 auto; }
+            .module-card { flex-direction: column; text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .section { padding: 60px 0; }
+            .bonus-grid { grid-template-columns: 1fr; }
+            .price-final { font-size: 2.5rem; }
+            .btn { padding: 15px 30px; width: 100%; font-size: 1.1rem; }
+            .stack-table td { padding: 15px 10px; font-size: 1rem; }
+            .guarantee { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div>
+                <span class="pre-header">CURSOS FLUYA PRESENTA</span>
+                <h1>IA Sin Código: <br><em>Multiplica tu Productividad</em> en 7 Días</h1>
+                <p class="hero-subtitle">Aprende a usar ChatGPT, Gemini y Claude como tu asistente personal — prompts profesionales listos para copiar y pegar.</p>
+                
+                <div class="hero-badges">
+                    <div class="badge">
+                        <i data-lucide="check-circle-2"></i> Sin experiencia técnica
+                    </div>
+                    <div class="badge">
+                        <i data-lucide="check-circle-2"></i> 100+ Prompts copiables
+                    </div>
+                    <div class="badge">
+                        <i data-lucide="check-circle-2"></i> Resultados en 7 días
+                    </div>
+                </div>
+
+                <a href="https://pay.hotmart.com/B107677790B" class="btn btn-primary btn-pulse">
+                    ¡QUIERO ACCESO AHORA! <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="hero-image">
+                <img src="../assets/img/cinematic_03.jpg" alt="Robot IA representativo">
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN SECTION -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center neon-text-orange" style="font-size: 2.5rem; margin-bottom: 20px;">¿Te identificas con alguna de estas situaciones?</h2>
+            
+            <div class="pain-grid">
+                <div class="glass-card pain-card">
+                    <i data-lucide="x-circle" class="pain-icon" width="32" height="32"></i>
+                    <p>Sabes que la IA existe pero no tienes idea de cómo usarla en tu trabajo diario.</p>
+                </div>
+                <div class="glass-card pain-card">
+                    <i data-lucide="x-circle" class="pain-icon" width="32" height="32"></i>
+                    <p>Intentaste usar ChatGPT pero las respuestas fueron genéricas, aburridas y decepcionantes.</p>
+                </div>
+                <div class="glass-card pain-card">
+                    <i data-lucide="x-circle" class="pain-icon" width="32" height="32"></i>
+                    <p>Sientes que te estás quedando atrás profesionalmente mientras otros avanzan usando IA.</p>
+                </div>
+                <div class="glass-card pain-card">
+                    <i data-lucide="x-circle" class="pain-icon" width="32" height="32"></i>
+                    <p>Pierdes horas interminables en tareas repetitivas que una IA bien configurada podría hacer en minutos.</p>
+                </div>
+                <div class="glass-card pain-card">
+                    <i data-lucide="x-circle" class="pain-icon" width="32" height="32"></i>
+                    <p>Tienes el miedo constante de que la Inteligencia Artificial eventualmente te reemplace en tu trabajo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="section solution-section">
+        <div class="container">
+            <div class="solution-content text-center">
+                <h2 class="neon-text-cyan" style="font-size: 2.5rem; margin-bottom: 30px;">La IA no te va a reemplazar. Pero alguien que sepa usar IA, SÍ.</h2>
+                <p style="font-size: 1.2rem; color: #b0b0b8;">No necesitas ser programador para dominar las herramientas del futuro. Este es un sistema práctico de 7 días diseñado específicamente para profesionales que quieren resultados inmediatos.</p>
+                
+                <div class="solution-list">
+                    <div class="solution-item">
+                        <i data-lucide="clock" style="color: var(--accent-secondary)"></i>
+                        <span><strong>Ahorra 10+ horas por semana</strong> automatizando correos, resúmenes y análisis.</span>
+                    </div>
+                    <div class="solution-item">
+                        <i data-lucide="pen-tool" style="color: var(--accent-secondary)"></i>
+                        <span><strong>Crea contenido profesional</strong> (textos, ideas, presentaciones) en una fracción del tiempo.</span>
+                    </div>
+                    <div class="solution-item">
+                        <i data-lucide="settings" style="color: var(--accent-secondary)"></i>
+                        <span><strong>Automatiza tareas aburridas</strong> y enfócate en el trabajo estratégico y creativo.</span>
+                    </div>
+                    <div class="solution-item">
+                        <i data-lucide="dollar-sign" style="color: var(--accent-secondary)"></i>
+                        <span><strong>Genera ingresos extra</strong> ofreciendo servicios apalancados por la Inteligencia Artificial.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULES SECTION -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center font-heading" style="font-size: 2.5rem; margin-bottom: 20px;">¿Qué Vas a Aprender?</h2>
+            
+            <div class="modules-grid">
+                <div class="glass-card module-card">
+                    <div class="module-icon-wrap">
+                        <i data-lucide="brain-circuit" width="40" height="40"></i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Módulo 1: La IA Desmitificada</h3>
+                        <p>Entiende de una vez por todas cómo piensan ChatGPT, Gemini y Claude. Configura tus cuentas y prepara tu entorno de trabajo para el éxito desde el día 1.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card module-card">
+                    <div class="module-icon-wrap">
+                        <i data-lucide="message-square-code" width="40" height="40"></i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Módulo 2: El Arte del Prompt — Fórmula CREA</h3>
+                        <p>Domina nuestra fórmula exclusiva para escribir instrucciones perfectas. Pasa de respuestas robóticas a resultados profesionales, precisos y con tono humano.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card module-card">
+                    <div class="module-icon-wrap">
+                        <i data-lucide="zap" width="40" height="40"></i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Módulo 3: Automatiza tu Trabajo en Minutos</h3>
+                        <p>Aprende a delegar a la IA la gestión de correos, análisis de Excel, resúmenes de reuniones largas y planificación de proyectos enteros.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card module-card">
+                    <div class="module-icon-wrap">
+                        <i data-lucide="palette" width="40" height="40"></i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Módulo 4: Crea Contenido Profesional con IA</h3>
+                        <p>Genera ideas infinitas para redes sociales, escribe artículos, guiones para videos y presentaciones persuasivas sin sufrir el "síndrome de la hoja en blanco".</p>
+                    </div>
+                </div>
+
+                <div class="glass-card module-card">
+                    <div class="module-icon-wrap">
+                        <i data-lucide="trending-up" width="40" height="40"></i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Módulo 5: Monetiza tus Habilidades de IA</h3>
+                        <p>Descubre cómo convertir esta nueva productividad en dinero real. Estrategias para freelance, negocios propios y ascensos corporativos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BONUSES SECTION -->
+    <section class="section bonuses-section">
+        <div class="container">
+            <h2 class="text-center neon-text-orange" style="font-size: 2.8rem;">🎁 Bonos Exclusivos GRATIS</h2>
+            <p class="text-center" style="font-size: 1.2rem; margin-top: 15px;">Al inscribirte hoy, te llevas estos complementos sin costo adicional.</p>
+            
+            <div class="bonus-grid">
+                <div class="glass-card bonus-card">
+                    <h3 class="font-heading" style="font-size: 1.8rem; margin-bottom: 15px;">Bono 1: Biblioteca de 100+ Prompts Copiables</h3>
+                    <p>Un arsenal de prompts probados y optimizados para marketing, ventas, programación, redacción y productividad personal. Solo copia, pega, cambia tus datos y disfruta los resultados.</p>
+                    <span class="bonus-value">Valor normal: $27 USD</span>
+                </div>
+                
+                <div class="glass-card bonus-card">
+                    <h3 class="font-heading" style="font-size: 1.8rem; margin-bottom: 15px;">Bono 2: Kit de Plantillas de Productividad con IA</h3>
+                    <p>Sistemas organizativos en Notion y Excel preparados para integrarse con flujos de IA. Organiza tu vida y tu negocio como un profesional de alto rendimiento.</p>
+                    <span class="bonus-value">Valor normal: $19 USD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUE STACK -->
+    <section class="section" id="comprar">
+        <div class="container">
+            <div class="glass-card value-stack">
+                <h2 class="text-center font-heading" style="font-size: 2.2rem; margin-bottom: 20px;">Resumen de Todo lo que Recibes Hoy</h2>
+                
+                <table class="stack-table">
+                    <tr>
+                        <td>Curso completo "IA Sin Código" (5 módulos en video)</td>
+                        <td>Valor $67</td>
+                    </tr>
+                    <tr>
+                        <td>5 Manuales PDF Premium de acompañamiento</td>
+                        <td>Valor $25</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bono 1:</strong> Biblioteca de 100+ Prompts Copiables</td>
+                        <td>Valor $27</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bono 2:</strong> Kit Plantillas Productividad con IA</td>
+                        <td>Valor $19</td>
+                    </tr>
+                </table>
+
+                <div class="stack-total text-center">
+                    <p style="font-size: 1.2rem; margin-bottom: 10px;">VALOR TOTAL: <span style="text-decoration: line-through;">$138 USD</span></p>
+                    <p style="margin-bottom: 5px;">HOY POR SOLO:</p>
+                    <div style="display: flex; justify-content: center; align-items: baseline;">
+                        <span class="price-strike">$67.00</span>
+                        <span class="price-final">$17.97</span>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 30px;">
+                    <a href="#" class="btn btn-primary btn-pulse" style="width: 100%;">
+                        ¡QUIERO TODO ESTO POR SOLO $17.97!
+                    </a>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">Pago único · Acceso de por vida · Sin pagos mensuales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-card guarantee">
+                <i data-lucide="shield-check" class="guarantee-icon"></i>
+                <h2 class="font-heading" style="font-size: 2.2rem; margin-bottom: 20px;">Garantía Incondicional de 7 Días</h2>
+                <p style="font-size: 1.1rem; color: #b0b0b8;">El riesgo es 100% nuestro. Si en 7 días no sientes que este curso transformó drásticamente tu productividad, o si simplemente no es lo que esperabas, te devolvemos el 100% de tu dinero. Sin letras pequeñas. Sin preguntas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center font-heading" style="font-size: 2.5rem;">Preguntas Frecuentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Necesito saber programar?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 10px;">No. El curso está diseñado desde cero para personas sin ningún tipo de experiencia técnica. Todo se explica de forma sencilla y directa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cuánto tiempo tengo acceso?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 10px;">Tu compra incluye acceso de por vida. Puedes ver los videos a tu propio ritmo, cuantas veces quieras, sin límite de tiempo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Funciona con cualquier IA?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 10px;">Sí, los principios que enseñamos son universales, y mostramos ejemplos prácticos usando los 3 líderes del mercado: ChatGPT, Gemini y Claude.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Puedo verlo en mi celular?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 10px;">Sí, la plataforma de Hotmart es 100% responsive y cuenta con su propia aplicación móvil (Hotmart Sparkle) para ver las clases incluso sin internet.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cómo accedo al curso?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 10px;">Inmediatamente después de confirmar el pago, recibirás un correo electrónico de Hotmart con tus credenciales de acceso para entrar al área de miembros.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Hay soporte si tengo dudas?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 10px;">Sí, contamos con un sistema de soporte por email y puedes dejar tus preguntas debajo de cada video dentro de la plataforma del curso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section final-cta">
+        <div class="container">
+            <h2 class="font-heading" style="font-size: 3rem; margin-bottom: 20px;">Tu productividad del futuro empieza HOY</h2>
+            
+            <div style="margin: 40px 0;">
+                <span class="price-strike">$67.00</span>
+                <span class="price-final">$17.97</span>
+            </div>
+
+            <a href="https://pay.hotmart.com/B107677790B" class="btn btn-primary btn-pulse" style="padding: 20px 50px; font-size: 1.4rem;">
+                ACCEDER AL CURSO AHORA
+            </a>
+
+            <div class="secure-badges">
+                <span><i data-lucide="lock" width="16" height="16"></i> Pago 100% seguro</span>
+                <span><i data-lucide="zap" width="16" height="16"></i> Acceso inmediato</span>
+                <span><i data-lucide="shield" width="16" height="16"></i> Garantía 7 días</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Cursos Fluya. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Este producto es comercializado con el apoyo de Hotmart. La plataforma no realiza un control editorial previo de los productos comercializados, ni evalúa la tecnicidad y experiencia de los autores. La existencia de un producto y su adquisición a través de la plataforma no pueden ser consideradas como garantía de calidad de contenido y resultado, en ningún caso.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                
+                // Close all other active items
+                document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+                    if (activeItem !== parent) {
+                        activeItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+
+  <script>
+    // Pasa los parámetros de seguimiento (afiliado, src, sck, UTM) al checkout de Hotmart
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      if (!params.toString()) return;
+      document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function (a) {
+        var url = new URL(a.href);
+        params.forEach(function (value, key) {
+          if (!url.searchParams.has(key)) url.searchParams.set(key, value);
+        });
+        a.href = url.toString();
+      });
+    })();
+  </script>
+</body>
+</html>
